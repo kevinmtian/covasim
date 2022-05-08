@@ -1,6 +1,8 @@
 '''
 Example for running custom calibration with Optuna
 '''
+import sciris as sc
+import covasim as cv
 
 pars = dict(
     verbose = 0,
@@ -10,7 +12,7 @@ pars = dict(
     interventions = cv.test_prob(symp_prob=0.01),
 )
 
-sim = cv.Sim(pars, datafile='example_data.csv')
+sim = cv.Sim(pars, datafile='/home/mtian/Projects/covasim/examples/example_data.csv')
 
 calib_pars = dict(
     beta      = [0.013, 0.005, 0.020],
@@ -27,5 +29,5 @@ def set_test_prob(sim, calib_pars):
 if __name__ == '__main__':
 
     # Run the calibration
-    calib = sim.calibrate(calib_pars=calib_pars, custom_fn=set_test_prob, n_trials=5)
-    calib.plot(to_plot=['cum_deaths', 'cum_diagnoses'])
+    calib = sim.calibrate(calib_pars=calib_pars, custom_fn=set_test_prob, n_trials=10)
+    calib.plot_sims(to_plot=['cum_deaths', 'cum_diagnoses', 'new_diagnoses'])

@@ -31,4 +31,4 @@ if __name__ == '__main__':
     calib = sim.calibrate(calib_pars=calib_pars, n_trials=n_trials, n_workers=n_workers)
 
     # Plot the results
-    calib.plot(to_plot=['cum_tests', 'cum_diagnoses', 'cum_deaths'])
+    calib.plot_sims(to_plot=['cum_tests', 'cum_diagnoses', 'cum_deaths'])
