@@ -21,9 +21,9 @@ def check_sciris():
         raise ModuleNotFoundError(errormsg)
     ver = sc.__version__
     minver = min_versions['sciris']
-    if sc.compareversions(ver, minver) < 0:
-        errormsg = f'You have Sciris {ver} but {minver} is required; please upgrade via "pip install --upgrade sciris"'
-        raise ImportError(errormsg)
+    # if sc.compareversions(ver, minver) < 0:
+    #     errormsg = f'You have Sciris {ver} but {minver} is required; please upgrade via "pip install --upgrade sciris"'
+    #     raise ImportError(errormsg)
     return
 
 
