@@ -1462,7 +1462,7 @@ class Calibration(Analyzer):
                     errormsg = 'The requested sampler function is not found: ensure it is a valid attribute of an Optuna Trial object'
                     raise AttributeError(errormsg) from E
             else:
-                sampler_fn = trial.suggest_uniform
+                sampler_fn = trial.suggest_float
             pars[key] = sampler_fn(key, low, high) # Sample from values within this range
         mismatch = self.run_sim(pars)
         return mismatch

@@ -51,6 +51,8 @@ def handle_args(fig_args=None, plot_args=None, scatter_args=None, axis_args=None
     args.fill    = sc.mergedicts(defaults.fill,    fill_args)
     args.legend  = sc.mergedicts(defaults.legend,  legend_args)
     args.date    = sc.mergedicts(defaults.date,    date_args)
+    # import pdb; pdb.set_trace()
+    show_args = None
     args.show    = sc.mergedicts(defaults.show,    show_args)
     args.style   = sc.mergedicts(defaults.style,   style_args)
 

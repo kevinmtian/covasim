@@ -7,7 +7,7 @@ the transitions between states (e.g., from susceptible to infected).
 import numpy as np
 import sciris as sc
 from collections import defaultdict
-from . import version as cvv
+from . import my_version as cvv
 from . import utils as cvu
 from . import defaults as cvd
 from . import base as cvb

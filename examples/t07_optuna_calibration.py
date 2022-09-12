@@ -15,8 +15,7 @@ pars = sc.objdict(
     interventions  = cv.test_num(daily_tests='data'),
     verbose        = 0,
 )
-sim = cv.Sim(pars=pars, datafile='example_data.csv')
-
+sim = cv.Sim(pars=pars, datafile='/data/tianmu/Projects/covasim/examples/example_data.csv')
 # Parameters to calibrate -- format is best, low, high
 calib_pars = dict(
     beta           = [pars.beta, 0.005, 0.20],
@@ -31,4 +30,4 @@ if __name__ == '__main__':
     calib = sim.calibrate(calib_pars=calib_pars, n_trials=n_trials, n_workers=n_workers)
 
     # Plot the results
-    calib.plot(to_plot=['cum_tests', 'cum_diagnoses', 'cum_deaths'])
+    calib.plot_sims(to_plot=['cum_tests', 'cum_diagnoses', 'cum_deaths'])

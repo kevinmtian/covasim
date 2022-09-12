@@ -10,7 +10,7 @@ from . import requirements
 from .settings import *
 
 # Import the version and print the license unless verbosity is disabled, via e.g. os.environ['COVASIM_VERBOSE'] = 0
-from .version import __version__, __versiondate__, __license__
+from .my_version import __version__, __versiondate__, __license__
 if settings.options.verbose:
     print(__license__)
 

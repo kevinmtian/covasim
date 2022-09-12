@@ -12,7 +12,7 @@ import sciris as sc
 import collections as co
 from pathlib import Path
 from distutils.version import LooseVersion
-from . import version as cvv
+from . import my_version as cvv
 from .settings import options as cvo
 
 #%% Convenience imports from Sciris
